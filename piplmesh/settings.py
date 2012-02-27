@@ -33,7 +33,7 @@ TIME_ZONE = 'Europe/Ljubljana'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'sl-si'
+LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
@@ -108,6 +108,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_PATH, "templates"),
 )
 
 INSTALLED_APPS = (
@@ -121,6 +122,8 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    
+    'frontend',
 )
 
 # A sample logging configuration. The only tangible logging
