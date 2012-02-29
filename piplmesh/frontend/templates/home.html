@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 
 {% block main %}
+
 <form method="get" action="http://www.google.com/search">
-	<div style="border:1px solid black;padding:4px;
-	position:absolute;right:2em;top:2em;">
+	<div id="googleSearchDiv">
+		<img src="{{ STATIC_URL }}images/google_logo_small.png" /><br />
 		<input type="text"   name="q" size="25" value="" />
 		<input type="submit" value="Google Search" />
 	</div>
 </form>
-This is main.
+
+<p>Hello World!</p>
+
 {% endblock %}
