@@ -6,7 +6,7 @@ admin.autodiscover()
 from piplmesh.frontend import views as frontend_views
 
 urlpatterns = patterns('',
-    url('^$', frontend_views.homeView, name='home'),
+    url('^$', frontend_views.HomeView.as_view(), name='home'),
     
     (r'^accounts/convert/', include('lazysignup.urls')),
     url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'redirect_field_name': 'redirect_to',}, name='logout'),

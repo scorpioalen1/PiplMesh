@@ -1,12 +1,16 @@
-from django.http import HttpResponse
-from django.template import loader, RequestContext
-from lazysignup.decorators import allow_lazy_user
+from django.views import generic as generic_views
+from django.utils import decorators as utils_decorators
+from lazysignup import decorators as lazysignup_decorators
 
-@allow_lazy_user
-def homeView(request):
-    
-    c = RequestContext(request)
-    
-    template = 'home.html'
-    t = loader.get_template(template)
-    return HttpResponse(t.render(c))
+class LazyUserMixin(object):
+   @utils_decorators.method_decorator(lazysignup_decorators.allow_lazy_user)
+   def dispatch(self, *args, **kwargs):
+       return super(LazyUserMixin, self).dispatch(*args, **kwargs)
+
+class HomeView(LazyUserMixin, generic_views.TemplateView):
+    template_name = 'home.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(HomeView, self).get_context_data(**kwargs)
+
+        return context
