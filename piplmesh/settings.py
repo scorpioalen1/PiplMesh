@@ -115,6 +115,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
+    'piplmesh.frontend.context_processor.search',
 )
 
 MIDDLEWARE_CLASSES = (
