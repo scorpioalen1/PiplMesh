@@ -1,3 +1,5 @@
+{% load i18n lazysignup_tags %}
+
 <div class="container">
     <div class="header">
         <div class="logo">
@@ -12,5 +14,14 @@
                     <input type="submit" value="{{ search_engine }} Search" />
                 </div>
             </form>
+        </div>
+        <div class="userbar">
+            {% if not user|is_lazy_user %}
+                {% trans "Hi" %}, {{ user }}
+                <a href="{% url logout %}?redirect_to={{ request.path }}">{% trans "Logout" %}</a>
+            {% else %}
+                <a href="{% url login %}?redirect_to={{ request.path }}">{%trans "Login" %}</a> {% trans "or" %}
+                {% trans "save your settings by" %} <a href="{% url lazysignup_convert %}?redirect_to={{ request.path }}">{% trans "registering" %}</a>. 
+            {% endif %}
         </div>
     </div>

@@ -46,11 +46,28 @@ body {
 			padding-top: 10px;
 			display: inline-block;
 		}
+		
+		.header .userbar {
+		    clear: both;
+		}
 
 	.main {
 		clear: both;
-		text-align: center;
 		position: relative;
+	}
+	
+	.convert form p {
+	    margin: 0;
+	}
+	
+	.convert form label {
+	    width: 145px;
+	    display: block;
+	    float: left;
+	}
+	
+	.convert form input[type=submit] {
+	    margin-left: 145px;
 	}
 	
 	.footer {
