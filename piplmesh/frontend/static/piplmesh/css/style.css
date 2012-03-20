@@ -14,7 +14,7 @@ body {
 	}
 	
 	.header {
-		background-color: yellow;
+		background-image: url(/static/piplmesh/images/background.png);
 		position: relative;
 		float: left;
 		width: 100%;
@@ -32,13 +32,13 @@ body {
 			}
 			
 			.header .logo img {
-				width: 80px;
+				width: 300px;
 			}
 		
 		.header .search {
 			float: right;
 			padding: 20px;
-			background: #FFF;
+			background-color: transparent;
 			width: 410px;
 		}
 		
