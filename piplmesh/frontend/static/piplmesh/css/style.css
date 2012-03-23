@@ -34,6 +34,10 @@ ul.errorlist {
     margin-right: auto;
 }
 
+#header #user {
+	float: right;
+}
+
 #header #logo {
     margin-top: 30px;
     margin-bottom: 10px;
@@ -41,7 +45,6 @@ ul.errorlist {
 
 #header #search {
     float: right;
-    padding: 20px;
     background: #FFF;
     width: 410px;
 }
