@@ -22,8 +22,8 @@ a {
 }
 
 /* Styling forms*/
-ul.errorlist {
-    list-style: none;
+li {
+	dispay: inline-block;
 }
 
 /* -------------------- HEADER --------------------- */
@@ -59,6 +59,9 @@ ul.errorlist {
     width: 960px;
     margin: auto;
     overflow: hidden;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .result {
@@ -72,7 +75,7 @@ ul.errorlist {
 /* --------------------- LOGIN ------------------------ */
 .login {
     text-align: center;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px;
 }
 
 .login_form {
@@ -122,7 +125,7 @@ ul.errorlist {
 .registration {
     width: 960px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .registration .form_field ul {
