@@ -5,7 +5,10 @@
 {% block title %}{% trans "Registration" %}{% endblock %}
 
 {% block content %}
+
 <div class="registration">
+	<h2>Registration</h2>
+	<br/>
     <form method="post" action="{% url registration %}">
         {% csrf_token %}
         {% for field in form %}
