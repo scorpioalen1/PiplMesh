@@ -1,1 +1,2 @@
 Django==1.4
+-e git://github.com/danfairs/django-lazysignup.git@3c487f4c6b8145da235e1f557a4ce2c3dcf4e650#egg=django_lazysignup-dev
