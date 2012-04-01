@@ -16,6 +16,11 @@ a {
     text-decoration: none;
 }
 
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
 .gravatar {
     border: 0px;
 }
@@ -27,34 +32,65 @@ ul.errorlist {
 
 /* -------------------- HEADER --------------------- */
 #header {
+    margin-top: 30px;
     width: 960px;
-    height: 150px;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
 }
 
 #header #logo {
-    margin-top: 30px;
     margin-bottom: 10px;
+    display: inline-block;
 }
 
 #header #search {
-    float: right;
     padding: 20px;
     background: #FFF;
-    width: 410px;
+    width: 500px;
+    float: right;
 }
 
-#header #search img {
-    padding-top: 10px;
-    display: inline-block;
+#header .user {
+    float: right;
 }
+
+#header .user ul {
+    list-style-type: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    font-size: 0.9em;
+}
+
+#header .user ul li {
+    display: inline-block;
+    border-right: 1px #D7D7D7 solid;
+    padding-right: 1em;
+    padding-left: 0.5em;
+}
+
+#header .user ul li.last {
+    border: none;
+}
+
+#header .user img {
+    margin-top: 5px;
+    float: right;
+}
+
 
 /* -------------------- MAIN ------------------------ */
 #main {
     width: 960px;
-    margin: auto;
-    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .result {
@@ -74,7 +110,7 @@ ul.errorlist {
     cursor: pointer;
     cursor: hand;
     color: #68AE2C;
-    font-size: 13px;
+    font-size: 12px;
     text-decoration: none;
 }
 
@@ -115,6 +151,10 @@ ul.errorlist {
 .login_form {
     text-align: right;
     display: inline-block;
+}
+
+.login_form p{
+    margin: 10px;
 }
 
 #other_login_options {
