@@ -6,7 +6,7 @@ from django.contrib.sites import models as sites_models
 
 register = template.Library()
 
-@register.inclusion_tag('gravatar.html', takes_context=True)
+@register.simple_tag(takes_context=True)
 def gravatar(context, user, size=50, default_avatar='unknown.png'):
     """
     Gravatar template tag returns avatar image based on user's email address.
@@ -38,9 +38,4 @@ def gravatar(context, user, size=50, default_avatar='unknown.png'):
         'default_avatar_url': urllib.quote(default_avatar_url),
     }
 
-    return {
-        'gravatar': {
-            'url': gravatar_url,
-            'size': size,
-        }
-    }
+    return '<img src="%s" width="%d" height="%d" class="gravatar" />' % (gravatar_url, size, size)

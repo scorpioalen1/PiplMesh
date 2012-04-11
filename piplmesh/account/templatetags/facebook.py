@@ -27,8 +27,9 @@ def facebook_picture(self, size):
     variable height) and "large" (200 pixels wide, variable height). 
     """
     
-    results = '%s?type=%s' % (utils.graph_api_url('%s/picture' % self), size)
-    return results
+    image_url = '%s?type=%s' % (utils.graph_api_url('%s/picture' % self), size)
+    
+    return '<img src="%s" class="facebook" />' % image_url
 
 @register.filter
 def valid_token(user):
