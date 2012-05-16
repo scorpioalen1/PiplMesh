@@ -92,7 +92,7 @@ class RegistrationForm(auth_forms.UserCreationForm):
 
         new_user.set_password(self.cleaned_data['password2'])
         new_user.save()
-
+        
         return self.cleaned_data['username'], self.cleaned_data['password2']
 
     def validate_unique(self):
